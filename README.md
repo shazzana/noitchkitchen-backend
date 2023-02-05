@@ -10,7 +10,7 @@ This purpose of the site is to provide a tool for people with histamine intolera
 ### Site can be accessed at the following url: https://noitchkitchen.vercel.app/
 
 - This repo consist of the backend of the site
-- The frontend uses HTML, CSS, Javascript, ReactJS. It can be accessed at the here: https://github.com/shazzana/noitchkitchen
+- The frontend uses HTML, CSS, Javascript, ReactJS. It can be accessed here: https://github.com/shazzana/noitchkitchen
 - Both repos must be running for the site to work locally
 
 ## Tech Stack/Libraries for backend
