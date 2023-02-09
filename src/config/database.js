@@ -1,16 +1,18 @@
-const { Pool } = require('pg');
 const dotenv = require('dotenv');
 
 dotenv.config();
 
-const pool = new Pool({
-    connectionString: process.env.DATABASE_URL
+  const pg = require('knex')({
+    client: 'pg',
+    connection: process.env.DATABASE_URL,
+    searchPath: ['knex', 'public'],
   });
   
-  pool.on('connect', () => {
+  pg.on('connect', () => {
     console.log('Database connected successfully!');
   });
   
   module.exports = {
-    query: (text, params) => pool.query(text, params),
+    query: (text, params) => pg.query(text, params),
   };
+
