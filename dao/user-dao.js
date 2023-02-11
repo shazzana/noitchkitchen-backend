@@ -13,6 +13,19 @@ class UserDAO {
         
         return id;
     }
+
+    async findAllUsers() {
+        return db('users');
+    }
+
+    async findOneUserById(id) {
+        return db('users')
+        .where({ id })
+    }
+
+    // async deleteOneUser() {
+        
+    // }
 }
 
 module.exports = new UserDAO();
