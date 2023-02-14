@@ -1,7 +1,6 @@
 // Import dependencies
 const mongoose = require("mongoose");
-const Title = require("./title.js");
-const Review = require("./review.js");
+const Ingredient = require("./ingredient.js");
 
 // Config
 // const mongoURI = "mongodb://localhost:27017/learn";
@@ -20,6 +19,5 @@ db.on("disconnected", () => console.log("mongo disconnected"));
 
 // Export models
 module.exports = {
-  Title,
-  Review,
+    Ingredient
 };
