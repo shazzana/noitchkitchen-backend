@@ -18,7 +18,7 @@ const ingredientSchema = new Schema({
         type: Boolean,
         required: false,
     },
-    otherAmines: {
+    other_amines: {
         type: Boolean,
         required: false,
     },
@@ -34,7 +34,7 @@ const ingredientSchema = new Schema({
         type: String,
         required: false,
     },
-    yourCompatibility: {
+    your_compatibility: {
         type: String,
         required: false,
     },

@@ -10,11 +10,11 @@ const create = async (req, response) => {
             name: req.body.name,
             remarks: req.body.remarks,
             histamine: req.body.histamine,
-            otherAmines: req.body.otherAmines,
+            otherAmines: req.body.other_amines,
             liberator: req.body.liberator,
             blocker: req.body.blocker,
             compatibility: req.body.compatibility,
-            yourCompatibility: req.body.yourCompatibility,
+            yourCompatibility: req.body.your_compatibility,
             category: req.body.category,
         };
 
