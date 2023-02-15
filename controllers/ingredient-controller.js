@@ -4,7 +4,7 @@ const db = ("../db/conn")
 
 const create = async (req, response) => {
     try {
-        let db_connect = db.getDb("ingredientsList");
+        let db_connect = db.getDb("ingredients");
         let myObj = {
             id: req.body.id,
             name: req.body.name,
@@ -18,7 +18,7 @@ const create = async (req, response) => {
             category: req.body.category,
         };
 
-        db_connect.collection("ingredientsList").insertOne(myObj, function (err, res) {
+        db_connect.collection("ingredients").insertOne(myObj, function (err, res) {
             if (err) throw err;
             response.json(res);
         });
@@ -43,7 +43,7 @@ const findAll = async (req, res) => {
 const updateOne = async (req, response) => {
     try {
       console.log(req.body);
-      let db_connect = db.getDb("ingredientsList");
+      let db_connect = db.getDb("ingredients");
       let ingredientId = req.params.id;
       let newIngredient = { id: ingredientId ,
        $set: req.body }
@@ -51,7 +51,7 @@ const updateOne = async (req, response) => {
       ;
   
       db_connect
-        .collection("ingredientsList")
+        .collection("ingredients")
         .updateOne({ id: ingredientId }, newIngredient, function (err, res) {
           if (err) throw err;
           console.log("1 document updated");
@@ -65,12 +65,12 @@ const updateOne = async (req, response) => {
 
   const deleteOne = async (req, response) => {
     try {
-      let db_connect = db.getDb("ingredientsList");
+      let db_connect = db.getDb("ingredients");
       console.log(req.params);
       const ingredientId = req.params.id;
       console.log(ingredientId);
 
-      db_connect.collection("ingredientsList").deleteOne(
+      db_connect.collection("ingredients").deleteOne(
         { id: ingredientId },
         function (err, res) {
           if (err) throw err;
@@ -86,7 +86,7 @@ const updateOne = async (req, response) => {
 
   const findOne = async (req, res) => {
     try {
-      const ingredientId = req.params.Id;
+      const ingredientId = req.params.id;
       const fetched = await Ingredient.findOne({ id: ingredientId });
       res.json(fetched);
     } catch (e) {
