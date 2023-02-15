@@ -1,10 +1,10 @@
-const { MongoClient } = require('mongodb');
-// const { MongoClient, ServerApiVersion } = require('mongodb');
+// const { MongoClient } = require('mongodb');
+const { MongoClient, ServerApiVersion } = require('mongodb');
 const Db = process.env.MONGO_URL;
 const client = new MongoClient(Db, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-//   serverApi: ServerApiVersion.v1
+  serverApi: ServerApiVersion.v1
 });
 
 var _db;

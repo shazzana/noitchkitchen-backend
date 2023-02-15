@@ -1,3 +1,5 @@
+const dotenv = require("dotenv");
+dotenv.config();
 const { Ingredient } = require('./models')
 
 const ingredients = [
