@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
 });
 
 // Endpoints
-app.use("/ingredient", IngredientRouter);
+app.use("/", IngredientRouter);
 
 app.use(express.static("public"));
 
