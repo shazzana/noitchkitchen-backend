@@ -4,19 +4,19 @@
 const path = require("path");
 const express = require("express");
 
-// const cors = require("cors");
-// const corsOptions = {
-//   origin: "*",
-//   credentials: true, //access-control-allow-credentials:true
-//   optionSuccessStatus: 200,
-// };
+const cors = require("cors");
+const corsOptions = {
+  origin: "*",
+  credentials: true, //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
+};
 
 const app = express();
 const { router: IngredientRouter } = require("./ingredient-router");
 const db = require("../db/conn");
 
 // Middleware
-// app.use(cors(corsOptions)); // Use this after the variable declaration
+app.use(cors(corsOptions)); // Use this after the variable declaration
 app.use(express.json());
 
 // Routers
