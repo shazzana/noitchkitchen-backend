@@ -13,6 +13,7 @@ const corsOptions = {
 
 const app = express();
 const { router: IngredientRouter } = require("./ingredient-router");
+const { router: AuthRouter } = require("./auth-router");
 const db = require("../db/conn");
 
 // Middleware
@@ -20,7 +21,7 @@ app.use(cors(corsOptions)); // Use this after the variable declaration
 app.use(express.json());
 
 // Routers
-// app.use("/auth", AuthRouter);
+app.use("/auth", AuthRouter);
 
 app.get("/", (req, res) => {
   res.send("Welcome to the root directory");
