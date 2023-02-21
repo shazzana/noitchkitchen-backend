@@ -4,6 +4,7 @@ const {
     findOne,
     updateOne,
     deleteOne,
+    // addToList,
   } = require("../controllers/ingredient-controller");
   const express = require("express");
   const router = express.Router();
@@ -14,6 +15,7 @@ const {
   router.get("/ingredient/:id", findOne);
   router.put("/ingredient/:id", updateOne);
   router.delete("/ingredient/:id", deleteOne);
+  // router.post("/saved", addToList);
   
   module.exports = {
     router,

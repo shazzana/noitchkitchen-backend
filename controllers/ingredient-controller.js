@@ -61,6 +61,16 @@ const updateOne = async (req, res) => {
     }
   };
 
+  // const addToList = (req, res) => {
+  //   try {
+  //     //get product by id
+  //     //
+  //   } catch (e) {
+  //     console.error(e);
+  //     res.sendStatus(httpStatus.INTERNAL_SERVER_ERROR);
+  //   }
+  // };
+
   module.exports = {
     create,
     findAll,
