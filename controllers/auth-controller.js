@@ -7,12 +7,12 @@ const {
   
   const signUp = async (req, res) => {
     const { email, password } = req.body;
-  
+    console.log("signUp()", email, password);
     // If either email or password is undefined|null, respond with bad request error
     if (!email || !password) return res.sendStatus(httpStatus.BAD_REQUEST);
   
     const result = await addUser(email, password);
-  
+    console.log("addUser result",result);
     res.json(result);
   };
   
